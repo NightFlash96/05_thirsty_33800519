@@ -28,7 +28,8 @@ router.get("/search", (req, res) => {
 
 router.get('/search_result', function (req, res) {
     // TODO: search in the database
-    res.send("You searched for " + req.query.search_text + " in " + req.query.category);
+    // use the form field name 'search_category' from the search form
+    res.send("You searched for " + req.query.search_text + " in " + req.query.search_category);
 });
 
 router.get("/register", (req,res) => {
