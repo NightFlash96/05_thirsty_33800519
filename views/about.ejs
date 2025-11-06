@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <h1>About <%= shopName %></h1>
+    <p>We sell all sorts of drinks</p>
+
+    <h2>Our branches:</h2>
+    <ul>
+      <% for(let i = 0; i < shopBranches.length; i++) { %>
+        <li><%= shopBranches[i].location %> — <%= shopBranches[i].address %> (Managed by: <%= shopBranches[i].manager %>)</li>
+      <% } %>
+    </ul>
+  </body>
+</html>

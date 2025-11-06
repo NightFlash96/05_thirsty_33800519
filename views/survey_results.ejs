@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Survey results — <%= shopName %></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <h1>Survey results</h1>
+
+    <section>
+      <h2>Personal details</h2>
+      <dl>
+        <dt>First name</dt>
+        <dd><%= survey.first %></dd>
+
+        <dt>Surname</dt>
+        <dd><%= survey.last %></dd>
+
+        <dt>Email</dt>
+        <dd><%= survey.email %></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Other information</h2>
+      <dl>
+        <dt>Age</dt>
+        <dd><%= survey.age %></dd>
+
+        <dt>Drinks category</dt>
+        <dd><%= survey.drink_category %></dd>
+
+        <dt>Student</dt>
+        <dd><%= survey.student %></dd>
+      </dl>
+    </section>
+
+    <p><a href="/register">Submit another survey</a> · <a href="/">Home</a></p>
+  </body>
+</html>
